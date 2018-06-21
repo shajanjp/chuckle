@@ -1,0 +1,139 @@
+securityDefinitions:
+  Bearer:
+    type: apiKey
+    name: Authorization
+    in: header
+tags:
+- name: "Users"
+  description: "Users APIs" 
+/api/users:
+  post:
+    summary: Create user
+    description: Create a user by data provided
+    security:
+    - Bearer: []
+    tags:
+    - Users
+    responses:
+      201:
+        description: Success
+    parameters:
+    - in: body
+      name: Body
+      required: true
+      schema:
+        type: object
+        properties:
+          username: 
+            type: string
+            example: EXAMPLE
+          email: 
+            type: string
+            example: EXAMPLE
+          firstName: 
+            type: string
+            example: EXAMPLE
+          lastName: 
+            type: string
+            example: EXAMPLE
+          password: 
+            type: string
+            example: EXAMPLE
+          role: 
+            type: string
+            example: USER
+          permissions[0]: 
+            type: string
+            example: EXAMPLE
+
+  get:
+    summary: List users
+    description: List users
+    security:
+    - Bearer: []
+    tags:
+    - Users
+    responses:
+      200:
+        description: Success
+
+/api/users/{userId}:
+  get:
+    summary: Get user details
+    description: Get details of specified user
+    security:
+    - Bearer: []
+    tags:
+    - Users
+    responses:
+      200:
+        description: Success
+    parameters:
+    - in: path
+      name: userId
+      schema:
+        type: string
+      required: true
+      description: User ID
+  put:
+    summary: Update user
+    description: Update user with provided data
+    security:
+    - Bearer: []
+    tags:
+    - Users
+    responses:
+      200:
+        description: Success
+    parameters:
+    - in: path
+      name: userId
+      schema:
+        type: string
+      required: true
+      description: User ID
+    - in: body
+      name: Body
+      required: true
+      schema:
+        type: object
+        properties:
+          username: 
+            type: string
+            example: EXAMPLE
+          email: 
+            type: string
+            example: EXAMPLE
+          firstName: 
+            type: string
+            example: EXAMPLE
+          lastName: 
+            type: string
+            example: EXAMPLE
+          password: 
+            type: string
+            example: EXAMPLE
+          role: 
+            type: string
+            example: USER
+          permissions[0]: 
+            type: string
+            example: EXAMPLE
+
+  delete:
+    summary: Remove user
+    description: Remove specified user
+    security:
+    - Bearer: []
+    tags:
+    - Users
+    responses:
+      200:
+        description: Success
+    parameters:
+    - in: path
+      name: userId
+      schema:
+        type: string
+      required: true
+      description: User ID
