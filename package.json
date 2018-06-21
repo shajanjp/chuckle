@@ -1,0 +1,42 @@
+{
+  "name": "chuckle",
+  "version": "0.0.2",
+  "description": "Chuckle is a fully open source, adaptable and modular platform for building and running a modern online social network.",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "body-parser": "^1.7.2",
+    "compression": "^1.7.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.4",
+    "joi": "^10.6.0",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^4.11.6",
+    "swagger-jsdoc": "^1.9.7",
+    "swagger-ui-express": "^2.0.15"
+  },
+  "devDependencies": {
+    "morgan": "^1.8.1",
+    "nodemon": "^1.17.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "development": "NODE_ENV=development nodemon server.js",
+    "production": "NODE_ENV=production node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shajanjp/chuckle.git"
+  },
+  "keywords": [
+    "chuckle",
+    "socail-networking",
+    "CMS",
+    "boilerplate",
+    "chat",
+    "realtime"
+  ],
+  "author": "shajanjp@gmail.com",
+  "license": "ISC"
+}

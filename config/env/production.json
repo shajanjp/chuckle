@@ -1,0 +1,13 @@
+{
+  "db": {
+    "url": "mongodb://localhost/chuckle"
+  },
+  "app" : {
+    "port": 3000,
+    "host": "localhost"
+  },
+  "jwt": {
+    "secret_key": "F1NDY0URS3LF@NDB3TH@T",
+    "expiry": "24h"
+  }
+}
